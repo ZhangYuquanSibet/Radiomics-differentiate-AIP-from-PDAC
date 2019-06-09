@@ -1,0 +1,10 @@
+function[image1]=tongyi(f,Y)
+Y=double(Y);
+Y=imresize(Y,f,'bicubic');
+m=512;n=512;
+[m1,n1]=size(Y);
+w=round(((m1-m)/2));
+h=round(((n1-n)/2));
+temp_X=Y(w+1:w+m,h+1:h+n);
+X=temp_X;
+image1=X;
